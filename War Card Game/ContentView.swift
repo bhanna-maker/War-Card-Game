@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    var playerCard = "card11"
+    var computerCard = "card5"
+    var playerScore = 0
+    var computerScore = 0
+    
+    
     var body: some View {
         ZStack {
             Image(.backgroundPlain)
@@ -21,7 +27,9 @@ struct ContentView: View {
                     Image(.card3)
                 }
                 Spacer()
-                Image(.button)
+                Button("Deal") {
+                 print("Deal me out Jack!")
+                }
                 Spacer()
                 
                 //Score()
@@ -31,7 +39,7 @@ struct ContentView: View {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                             .padding(.bottom, 40.0)
                         
@@ -41,7 +49,7 @@ struct ContentView: View {
                         Text("Computer")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(computerScore))
                             .font(.largeTitle)
                             .padding(.bottom, 40.0)
 
